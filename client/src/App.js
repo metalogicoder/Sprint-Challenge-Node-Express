@@ -1,8 +1,25 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = { projects: [] }
+
+  componentDidMount() {
+    this.getProjects();
+  }
+
+  getProjects() {
+    axios.get('http://localhost:5000/api/projects')
+      .then(res => {
+        this.setState({ projects: res.data })
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,6 +30,9 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <div className="Projects">
+          
+        </div>
       </div>
     );
   }
