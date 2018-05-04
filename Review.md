@@ -10,7 +10,7 @@ Express is a framework for Node.js that is use to help build APIs.
 I enjoyed learning how calling 'express()' to build our servers was actually returning a function that we could work from while if we used something like 'express.json()' it acts as a body parser to help translate our code inso JSON.
 
 ## What is Middleware?
-
+Middleware is software that add functionality to our server. Our data usually passes through them in the order that they are called while traveling through the server.
 
 ## What is a Resource?
 
