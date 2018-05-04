@@ -22,4 +22,4 @@ Http statuses are a great way to return success or error messages back to the us
 I believe the main way of partitioning our application would be to use routes such as the one used in the last few days of class. Especially when you have to manage data differently whe dealing with seperate resources. Creating seperate route files for processes unique to each resource is always a great way yo stay organized.
 
 ## What is CORS and why do we need it?
-
+Cors is a middleware that lets us bypass some of the errors that are thrown when trying to pull from our api when making apps in our local environment. I believe that is has to do with it not liking the localhost port that we try to connect to.
