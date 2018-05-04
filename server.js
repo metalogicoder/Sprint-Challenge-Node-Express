@@ -37,4 +37,18 @@ server.get('/api/:target/:id', (req, res) => {
     });
 });
 
+// add data to target in database
+server.post('/api/:target', (req, res) => {
+  db[req.params.target]
+    .insert(req.body)
+    .then(newData => {
+      res.status(201).json(newData);
+    })
+    .catch(err => {
+      res.status(500).json({
+        error: 'There was an error while saving data to the database'
+      });
+    });
+});
+
 server.listen(5000, console.log('\n== API Running on port 5000 ==\n'));
