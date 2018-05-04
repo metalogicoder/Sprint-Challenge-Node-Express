@@ -7,7 +7,7 @@ Node.js is a server side Javascript environment.
 Express is a framework for Node.js that is use to help build APIs.
 
 ## Mention two parts of Express that you learned about this week.
-
+I enjoyed learning how calling 'express()' to build our servers was actually returning a function that we could work from while if we used something like 'express.json()' it acts as a body parser to help translate our code inso JSON.
 
 ## What is Middleware?
 
