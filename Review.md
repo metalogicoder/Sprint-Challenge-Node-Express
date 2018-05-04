@@ -19,7 +19,7 @@ A resource is any data that will pertain to a specific category such as users, p
 Http statuses are a great way to return success or error messages back to the user.
 
 ## How can we partition our application into sub-applications?
-
+I believe the main way of partitioning our application would be to use routes such as the one used in the last few days of class. Especially when you have to manage data differently whe dealing with seperate resources. Creating seperate route files for processes unique to each resource is always a great way yo stay organized.
 
 ## What is CORS and why do we need it?
 
