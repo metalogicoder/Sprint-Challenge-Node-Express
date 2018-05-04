@@ -4,15 +4,15 @@ import { Card, CardText, CardBody,
 
 const ProjectCard = props => {
   return (
-    <div>
-    <Card>
+    <Card className="ProjectCard">
       <CardBody>
         <CardTitle>{props.project.name}</CardTitle>
-        <CardSubtitle>Completed: {props.project.completed}</CardSubtitle>
+        <CardSubtitle>Completed: {String(props.project.completed)}</CardSubtitle>
         <CardText>{props.project.description}</CardText>
-        <Button>Actions</Button>
+        <Button color="primary">Actions</Button>
       </CardBody>
     </Card>
-  </div>
   )
 }
+
+export default ProjectCard;
