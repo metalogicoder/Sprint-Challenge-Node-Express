@@ -51,4 +51,18 @@ server.post('/api/:target', (req, res) => {
     });
 });
 
+// update specific element of target in database
+server.put('/api/:target/:id', (req, res) => {
+  db[req.params.target]
+    .update(req.params.id, req.body)
+    .then(updatedData => {
+      res.json(updatedData);
+    })
+    .catch(err => {
+      res.status(500).json({
+        error: 'The data could not be updated'
+      });
+    });
+});
+
 server.listen(5000, console.log('\n== API Running on port 5000 ==\n'));
