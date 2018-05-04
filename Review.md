@@ -13,7 +13,7 @@ I enjoyed learning how calling 'express()' to build our servers was actually ret
 Middleware is software that add functionality to our server. Our data usually passes through them in the order that they are called while traveling through the server.
 
 ## What is a Resource?
-
+A resource is any data that will pertain to a specific category such as users, posts, and tags.
 
 ## What can the API return to help clients know if a request was successful?
 
