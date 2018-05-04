@@ -4,7 +4,7 @@
 Node.js is a server side Javascript environment.
 
 ## What is Express?
-
+Express is a framework for Node.js that is use to help build APIs.
 
 ## Mention two parts of Express that you learned about this week.
 
