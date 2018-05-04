@@ -16,7 +16,7 @@ Middleware is software that add functionality to our server. Our data usually pa
 A resource is any data that will pertain to a specific category such as users, posts, and tags.
 
 ## What can the API return to help clients know if a request was successful?
-
+Http statuses are a great way to return success or error messages back to the user.
 
 ## How can we partition our application into sub-applications?
 
