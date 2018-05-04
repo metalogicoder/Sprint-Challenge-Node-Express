@@ -1,12 +1,14 @@
 const express = require('express');
 
 const server = express();
+const projectRoutes = require('./routes/projectRoutes');
 
 server.use(express.json());
+server.use('/api/projects', projectRoutes);
 
 const db = {
   actions: require('./data/helpers/actionModel'),
-  projects: require('./data/helpers/projectModel.js')
+  projects: require('./data/helpers/projectModel')
 }
 
 // get data from target in database
