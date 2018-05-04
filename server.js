@@ -65,4 +65,18 @@ server.put('/api/:target/:id', (req, res) => {
     });
 });
 
+// delete specific element of target in database
+server.delete('/api/:target/:id', (req, res) => {
+  db[req.params.target]
+    .remove(req.params.id)
+    .then(numOfDeletedItems => {
+      res.json(numOfDeletedItems);
+    })
+    .catch(err => {
+      res.status(500).json({
+        error: 'The data could not be deleted'
+      });
+    });
+});
+
 server.listen(5000, console.log('\n== API Running on port 5000 ==\n'));
