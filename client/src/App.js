@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+
 import logo from './logo.svg';
 import './App.css';
+import ProjectCard from './components/ProjectCard';
 
 class App extends Component {
   state = { projects: [] }
@@ -31,7 +33,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div className="Projects">
-          
+          {this.state.projects.map(project => <ProjectCard project={project}/>)}
         </div>
       </div>
     );
